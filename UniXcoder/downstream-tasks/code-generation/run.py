@@ -84,8 +84,9 @@ class InputFeatures(object):
         self.example_id = example_id
         self.source_ids = source_ids
         self.target_ids = target_ids     
-        
-def convert_examples_to_features(examples, tokenizer, args,stage=None):
+
+
+def convert_examples_to_features(examples, tokenizer, args, stage=None):
     features = []
     for example_index, example in enumerate(examples):
         #source
