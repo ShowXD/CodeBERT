@@ -134,3 +134,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Generate stuff
+CodeBERT/codemask/generated_code/
+CodeBERT/codemask/roberta-retrained/

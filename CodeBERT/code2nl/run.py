@@ -156,7 +156,7 @@ def convert_examples_to_mutant_features(examples, tokenizer, args, stage=None):
     features = []
     for example_index, example in enumerate(examples):
         # source
-        # TODO: 替換成錯誤的程式碼
+        # 替換成錯誤的程式碼
         no_semicolon_source = str(example.source).replace(':', '<mask>')
         logger.info("no_semicolon_source: {}".format(no_semicolon_source))
         source_tokens = tokenizer.tokenize(no_semicolon_source)[:args.max_source_length - 2]
@@ -168,7 +168,7 @@ def convert_examples_to_mutant_features(examples, tokenizer, args, stage=None):
         source_mask += [0] * padding_length
 
         # target
-        # TODO: 替換成正確的程式碼
+        # 替換成正確的程式碼
         if stage == "test":
             target_tokens = tokenizer.tokenize("None")
         else:
